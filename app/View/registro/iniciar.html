@@ -1,0 +1,21 @@
+<!-- Formulario para inserir dados -->
+<form name="formInsert" action="{{urlPage}}/{{modulo}}/adicionar" method="post">
+	<div class="form-row">
+		<div class="form-group col-md-4">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="nome">Nome</label>
+			<input class= "form-control form-control-sm" type="text" name="nome" id="nome">
+		</div>
+		<div class="form-group col-md-3">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="email">Email</label>
+			<input class= "form-control form-control-sm" type="email" name="email" id="email">
+		</div>
+		<div class="form-group col-md-3">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="senha">Senha</label>
+			<input class= "form-control form-control-sm" type="password" name="senha" id="senha">
+		</div>
+		<div class="form-group col-md-2 mb-2">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="btn-add">Adicionar</label>
+			<button class="form-control btn btn-link" type="submit" title="Adicionar" id="btn-add"><i class="material-icons text-success">add</i></button>
+		</div>
+	</div>
+</form>

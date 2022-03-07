@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}{{titulo}}{% endblock %}
+{% block navbar %}
+{% include('home/navbar.html') %}
+{% endblock %}
+{% block content %}
+{% if acao == 'iniciar' %}
+{% include('home/iniciar.html') %}
+{% endif %}
+{% endblock %}

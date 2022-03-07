@@ -1,0 +1,23 @@
+<!-- Modal Delete -->
+<button type="button" class="btn btn-link" title="Excluir" data-toggle="modal" data-target="#modal{{deleteId}}">
+  <i class="material-icons text-danger">delete</i>
+</button>
+<div class="modal fade" id="modal{{deleteId}}" tabindex="-1" role="dialog" aria-labelledby="Label{{deleteId}}" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="Label{{deleteId}}">Exclusão de registro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" title="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="text-warning">Tem certeza que deseja excluir o registro <strong class="text-danger">{{deleteId}}</strong> da tabela <strong class="text-danger">{{tabela}}?</strong></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm"  onclick="window.location.href='{{deleteController}}{{deleteFunction}}/{{deleteId}}/{{pagination.currentPage}}'" title="Sim"><i class="material-icons">thumb_up</i></button>
+        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal" title="Não"><i class="material-icons">thumb_down</i></button>
+      </div>
+    </div>
+  </div>
+</div>

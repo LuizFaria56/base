@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}{{titulo}}{% endblock %}
+{% block navbar %}
+{% if acao == 'iniciar' %}
+{% include('intranet/navbar.html') %}
+{% endif %}
+{% endblock %}
+{% block content %}
+{% if acao == 'iniciar' %}
+{% include('intranet/iniciar.html') %}
+{% endif %}
+{% endblock %}

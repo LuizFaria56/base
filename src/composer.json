@@ -1,0 +1,20 @@
+{
+    "name": "lfaria/base",
+    "description": "Aplicacao MVC-Base",
+    "authors": [
+        {
+            "name": "Luiz Faria",
+            "email": "luiz.antonio.faria@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.3",
+        "symfony/finder": "^5.4"
+    },
+    "autoload":{
+        "psr-4":{
+            "App\\":"../app/",
+            "Src\\":"../src/"
+        }
+    }
+}

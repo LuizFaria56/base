@@ -1,0 +1,26 @@
+<!-- Lista dos elementos da Tabela -->
+<table class="table table-sm table-striped table-hover">
+  <thead class="thead-light">
+		<tr>
+			<th>Nome</th>
+			<th>Email</th>
+			<th>Cidade</th>
+			<th>Alterar</th>
+			<th>Excluir</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for key, item in lista %}
+		<tr>
+			<td>{{item.nome}}</td>
+			<td>{{item.email}}</td>
+			<td>{{item.cidade}}</td>
+			<td><a href="{{urlPage}}/{{modulo}}/alterar/{{item.id}}/{{pagination.currentPage}}" class="btn btn-link" title="Alterar"><i class="material-icons text-success">edit</i></a></td>
+			<td>
+	          {% set deleteId = item.id %}
+	          {{ include('modal_delete.html') }}
+			</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

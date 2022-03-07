@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <!-- head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="mvc, base">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- botstrap css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <!-- Style.css personalizado -->
+        <link rel="stylesheet" type="text/css" href="{{urlPage}}/public/css/Style.css">
+        <!-- fonte Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- bloco titulo da aba do navegador -->
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+
+        <!-- bloco com a descricao da pagina: topo da pagina -->
+        <header id="topo">
+        {% block titulo %}
+            <div class="container">
+                <div class="row mt-3 bg-light">
+                    <div class="col-1">
+                        <a href="{{urlPage}}/{{voltarClass}}" class="btn btn-link" title="Voltar" id="btn-voltar"><i class="material-icons text-danger">{{voltarIcon}}</i></a>
+                    </div>
+                    <div class="col-10">
+                        <h1 class="text-primary text-center">{{descricao}}</h1>
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+
+        <!-- bloco barra de navegacao -->
+        {% block navbar %}
+        {% endblock %}
+
+        <!-- bloco subtitulo -->
+        {% block subtitulo %}
+        {% if subtitulo != null %}
+            <div class="container">
+                <div class="row mt-3 bg-light">
+                    <div class="col-8">
+                        <h4 class="text-secondary">{{subtitulo}}</h4>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% endblock %}
+        </header>
+
+        <!-- bloco conteudo dinamico da respectiva view -->
+        <main>
+            <div class="container">
+            {% block content %}
+            {% endblock %}
+                <!-- link para voltar ao topo da pagina -->
+                <div class="fixed-bottom">
+                    <p class="text-right">
+                        <a href="#topo" title="Topo"><i class="material-icons text-success">arrow_upward</i></a>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!--  bloco rodape - java scripts  -->
+        <footer>
+        {% block footer %}
+            <!-- jQuery -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <!-- jQueryMask -->
+            <script src="{{urlPage}}/public/js/jquery.mask.min.js"></script>
+            <!-- Bootstrap 4.6 -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+            <!-- script proprio -->
+            <script src="{{urlPage}}/public/js/scripts.js"></script>
+        {% endblock %}
+        </footer>
+
+    </body>
+
+</html>

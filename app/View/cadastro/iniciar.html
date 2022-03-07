@@ -1,0 +1,61 @@
+<!-- Formulario para alterar dados -->
+<form name="formUpdate" action="{{urlPage}}/{{modulo}}/atualizar" method="post">
+	<input type="hidden" name="id" value="{{objeto.id}}">
+	<div class="form-row">
+		<div class="form-group col-md-4">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="nome">Nome</label>
+			<input class= "form-control form-control-sm" type="text" name="nome" id="nome" value="{{objeto.nome}}">
+		</div>
+		<div class="form-group col-md-3">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="email">Email</label>
+			<input class= "form-control form-control-sm" type="email" name="email" id="email" value="{{objeto.email}}">
+		</div>
+		<div class="form-group col-md-5">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="endereco">Endereco</label>
+			<input class= "form-control form-control-sm" type="text" name="endereco" id="endereco" value="{{objeto.endereco}}">
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="form-group col-md-3">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="cidade">Cidade</label>
+			<input class= "form-control form-control-sm" type="text" name="cidade" id="cidade" value="{{objeto.cidade}}">
+		</div>
+		<div class="form-group col-md-1">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="estado">UF</label>
+			<input class= "form-control form-control-sm" type="text" name="estado" id="estado" value="{{objeto.estado}}">
+		</div>
+		<div class="form-group col-md-2">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="cep">CEP</label>
+			<input class= "form-control form-control-sm" type="text" name="cep" id="cep" value="{{objeto.cep}}">
+		</div>
+		<div class="form-group col-md-2">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="telefone">Telefone</label>
+			<input class= "form-control form-control-sm" type="text" name="telefone" id="telefone" value="{{objeto.telefone}}">
+		</div>
+		<div class="form-group col-md-2">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="nivel">Nível</label>
+		{% if sessao.nivel == adminLevel %}
+			<select class="form-control form-control-sm form-select" name="nivel" id="nivel">
+		{% else %}
+			<input type="hidden" name="nivel" value="{{objeto.nivel}}">
+			<select class="form-control form-control-sm form-select" name="nivel" id="nivel" disabled>
+		{% endif %}
+				<option value=""></option>
+	      		{% if objeto.nivel == userLevel %}
+	      		<option value="{{userLevel}}" selected>Usuário</option>
+	      		{% else %}
+	      		<option value="{{userLevel}}">Usuário</option>
+	      		{% endif %}
+	      		{% if objeto.nivel == adminLevel %}
+	      		<option value="{{adminLevel}}" selected>Administrador</option>
+	      		{% else %}
+	      		<option value="{{adminLevel}}">Administrador</option>
+	      		{% endif %}
+			</select>
+		</div>
+		<div class="form-group col-md-2 mb-2">
+			<label class="col-sm-2 col-form-label col-form-label-sm text-primary" for="btn-save">Gravar</label>
+			<button class="form-control btn btn-link" type="submit" title="Gravar" id="btn-save"><i class="material-icons text-success">save</i></button>
+		</div>
+	</div>
+</form>

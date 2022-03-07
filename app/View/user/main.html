@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}{{titulo}}{% endblock %}
+{% block content %}
+{% if acao == 'iniciar' %}
+{% include('user/iniciar.html') %}
+{% endif %}
+{% if acao == 'alterar' %}
+{% include('user/alterar.html') %}
+{% endif %}
+{% include('user/table.html') %}
+{% include('pagination.html') %}
+{% endblock %}

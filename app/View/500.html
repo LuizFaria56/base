@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Erro{% endblock %}
+{% block content %}
+    <!-- Erro 500: outros erros -->
+    <h1 class="text-danger">Ocorreu um erro</h1>
+    <pre>
+    	<p class="text-danger">{{mensagem}}</p>
+	</pre>
+{% endblock %}

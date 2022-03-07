@@ -1,0 +1,26 @@
+<!-- paginacao -->
+{% if pagination.pages > 1 %}
+<nav aria-label="Páginas">
+  <ul class="pagination">
+{% if pagination.start > 1 %}
+  	<li class="page-item"><a class="page-link" href="{{urlPage}}/{{modulo}}/{{pgAcao}}/1" title="Primeira"><i class="material-icons">first_page</i></a></li>
+{% endif %}
+
+{% for key, item in pageLst %}
+	{% if item.page >= pagination.start and item.page <= pagination.end %}
+
+	{% if item.current == 1 %}
+    <li class="page-item active"><a class="page-link" href="{{urlPage}}/{{modulo}}/{{pgAcao}}/{{item.page}}">{{item.page}}</a></li>
+	{% else %}
+    <li class="page-item"><a class="page-link" href="{{urlPage}}/{{modulo}}/{{pgAcao}}/{{item.page}}">{{item.page}}</a></li>
+	{% endif %}
+
+	{% endif %}
+{% endfor %}
+
+{% if pagination.end < pagination.pages %}
+  	<li class="page-item"><a class="page-link" href="{{urlPage}}/{{modulo}}/{{pgAcao}}/{{pagination.pages}}" title="Última"><i class="material-icons">last_page</i></a></li>
+{% endif %}
+  </ul>
+</nav>
+{% endif %}
