@@ -1,0 +1,28 @@
+
+<!-- TABELA COM CONTEUDO -->
+<table class="table table-sm table-striped table-hover">
+    <thead>
+
+        <tr>
+            <th class="table-secondary" scope="col">Id</th>
+            <th class="table-secondary" scope="col">Nome</th>
+            <th class="table-secondary" scope="col">Email</th>
+            <th class="table-secondary" scope="col">Alterar</th>
+            <th class="table-secondary" scope="col">Excluir</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        {% for key, item in lista %}
+        
+        <tr>
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.nome}}</td>
+            <td>{{item.email}}</td>
+            <td><a class="btn btn-link" href="{{root}}/user/edit/{{item.id}}"><i class="material-icons text-success">edit</i></a></td>
+            <td><a class="btn btn-link" href="{{root}}/user/delete/{{item.id}}"><i class="material-icons text-danger">delete</i></a></td>
+        </tr>
+        
+        {% endfor %}        
+    </tbody>
+</table>

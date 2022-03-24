@@ -1,0 +1,31 @@
+
+<!-- SENHA -->
+<div class="row">
+   <div class="col-5">
+      <div class="card mt-2">
+         <div class="card-body">
+            <form action="{{root}}/user/senha" method="post">
+                <input type="hidden" name="id" id="id" value="{{args.arg}}">
+                <div class="row mb-4">
+                  <label for="senha" class="col-sm-3 col-form-label col-form-label-sm">Nova senha</label>
+                  <div class="col-sm-6">
+                    <input type="password" class="form-control form-control-sm" name="senha" id="senha">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="confirmacao" class="col-sm-3 col-form-label col-form-label-sm">Confirmação</label>
+                  <div class="col-sm-6">
+                    <input type="password" class="form-control form-control-sm" name="confirmacao" id="confirmacao">
+                  </div>
+                </div>
+                <div class="row mb-4">
+                  <label for="btn-save" class="col-sm-3 col-form-label col-form-label-sm">Gravar</label>
+                  <div class="col-sm-1">
+                    <button type="submit" class="form-control form-control-sm btn btn-link" name="btn-save" id="btn-save" title="Gravar"><i class="material-icons text-success">save</i></button>
+                  </div>
+                </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

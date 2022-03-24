@@ -1,0 +1,24 @@
+[13-Mar-2022 20:52:23 Europe/Berlin] Uncaught exception: 'Exception'
+ with message 'Controller class App\Controller\Qualquercoisa not found'
+
+Stack trace: #0 /opt/lampp/htdocs/base/public/index.php(26): Core\Router->dispatch('qualquercoisa/a...')
+#1 {main}
+
+Thrown in '/opt/lampp/htdocs/base/core/Router.php' on line 127
+
+[13-Mar-2022 16:54:56 America/Sao_Paulo] Uncaught exception: 'Exception'
+ with message 'Controller class App\Controller\Outro not found'
+
+Stack trace: #0 /opt/lampp/htdocs/base/public/index.php(32): Core\Router->dispatch('outro/acao')
+#1 {main}
+
+Thrown in '/opt/lampp/htdocs/base/core/Router.php' on line 127
+
+[13-Mar-2022 17:01:01 America/Sao_Paulo] Uncaught exception: 'Exception'
+ with message 'Controller class App\Controller\Outro not found'
+
+Stack trace: #0 /opt/lampp/htdocs/base/public/index.php(32): Core\Router->dispatch('outro/acao')
+#1 {main}
+
+Thrown in '/opt/lampp/htdocs/base/core/Router.php' on line 127
+

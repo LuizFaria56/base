@@ -1,0 +1,44 @@
+[14-Mar-2022 10:14:47 America/Sao_Paulo] Uncaught exception: 'Exception'
+ with message 'A template that extends another one cannot include content outside Twig blocks. Did you forget to put the content inside a {% block %} tag?'
+
+Stack trace: #0 [internal function]: App\Controller\Home->indexAction()
+#1 /opt/lampp/htdocs/base/core/Controller.php(48): call_user_func_array(Array, Array)
+#2 /opt/lampp/htdocs/base/core/Router.php(121): Core\Controller->__call('index', Array)
+#3 /opt/lampp/htdocs/base/public/index.php(32): Core\Router->dispatch('')
+#4 {main}
+
+Thrown in '/opt/lampp/htdocs/base/app/Controller/Home.php' on line 29
+
+[14-Mar-2022 10:16:51 America/Sao_Paulo] Uncaught exception: 'Exception'
+ with message 'A template that extends another one cannot include content outside Twig blocks. Did you forget to put the content inside a {% block %} tag?'
+
+Stack trace: #0 [internal function]: App\Controller\Home->indexAction()
+#1 /opt/lampp/htdocs/base/core/Controller.php(48): call_user_func_array(Array, Array)
+#2 /opt/lampp/htdocs/base/core/Router.php(121): Core\Controller->__call('index', Array)
+#3 /opt/lampp/htdocs/base/public/index.php(32): Core\Router->dispatch('')
+#4 {main}
+
+Thrown in '/opt/lampp/htdocs/base/app/Controller/Home.php' on line 29
+
+[14-Mar-2022 10:22:19 America/Sao_Paulo] Uncaught exception: 'Exception'
+ with message 'A template that extends another one cannot include content outside Twig blocks. Did you forget to put the content inside a {% block %} tag?'
+
+Stack trace: #0 [internal function]: App\Controller\Home->indexAction()
+#1 /opt/lampp/htdocs/base/core/Controller.php(48): call_user_func_array(Array, Array)
+#2 /opt/lampp/htdocs/base/core/Router.php(121): Core\Controller->__call('index', Array)
+#3 /opt/lampp/htdocs/base/public/index.php(32): Core\Router->dispatch('')
+#4 {main}
+
+Thrown in '/opt/lampp/htdocs/base/app/Controller/Home.php' on line 29
+
+[14-Mar-2022 10:22:28 America/Sao_Paulo] Uncaught exception: 'Exception'
+ with message 'A template that extends another one cannot include content outside Twig blocks. Did you forget to put the content inside a {% block %} tag?'
+
+Stack trace: #0 [internal function]: App\Controller\Home->indexAction()
+#1 /opt/lampp/htdocs/base/core/Controller.php(48): call_user_func_array(Array, Array)
+#2 /opt/lampp/htdocs/base/core/Router.php(121): Core\Controller->__call('index', Array)
+#3 /opt/lampp/htdocs/base/public/index.php(32): Core\Router->dispatch('')
+#4 {main}
+
+Thrown in '/opt/lampp/htdocs/base/app/Controller/Home.php' on line 29
+

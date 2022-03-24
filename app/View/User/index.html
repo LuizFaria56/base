@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+    <!-- USER INDEX -->
+
+    {% if args.action == 'register' %}
+        {% include('User/register.html') %}
+    {% endif %}
+
+    {% if args.action == 'login' %}
+        {% include('User/login.html') %}
+    {% endif %}
+
+    {% if args.action == 'index' %}
+        {% include('User/insert.html') %}
+    {% endif %}
+
+    {% if args.action == 'edit' %}
+        {% include('User/update.html') %}
+    {% endif %}
+
+    {% if args.action == 'senha' %}
+        {% include('User/senha.html') %}
+    {% endif %}
+
+    {% if session.nivel == 9 and (args.action == 'index' or args.action == 'edit') %}
+        {% include('User/table.html') %}
+    {% endif %}
+
+{% endblock %}

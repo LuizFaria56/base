@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+{% include('Intranet/navbar.html') %}
+{% endblock %}
+
+{% block body %}
+
+    <!-- INTRANET INDEX -->
+    <p class="text-start">Welcome</p>
+    {% for key, item in args %}
+    <p>{{key}}: {{item}}</p>
+    {% endfor %}
+
+    {% for key, item in session %}
+    <p>{{key}}: {{item}}</p>
+    {% endfor %}
+    
+{% endblock %}

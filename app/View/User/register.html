@@ -1,0 +1,22 @@
+
+<!-- Formulario para visitante registrar-se -->
+<form name="insert" action="{{root}}/user/register" method="post">
+	<div class="row mt-3">
+		<div class="col-md-4">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="nome">Nome</label>
+			<input class= "form-control form-control-sm" type="text" name="nome" id="nome">
+		</div>
+		<div class="col-md-3">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="email">Email</label>
+			<input class= "form-control form-control-sm" type="email" name="email" id="email">
+		</div>
+		<div class="col-md-3">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="senha">Senha</label>
+			<input class= "form-control form-control-sm" type="password" name="senha" id="senha">
+		</div>
+		<div class="col-md-2 mb-2">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="btn-add">Adicionar</label>
+			<button class="form-control btn btn-link" type="submit" title="Adicionar" name="btn-add" value="add" id="btn-add"><i class="material-icons text-success">add</i></button>
+		</div>
+	</div>
+</form>

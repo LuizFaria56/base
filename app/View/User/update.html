@@ -1,0 +1,63 @@
+
+<!-- Formulario para atualizar usuario -->
+<form name="insert" action="{{root}}/user/edit" method="post">
+	<input type="hidden" name="id" value="{{objeto.id}}">
+   <div class="row mt-3">
+		<div class="col-md-3">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="nome">Nome</label>
+			<input class= "form-control form-control-sm" type="text" name="nome" id="nome" value="{{objeto.nome}}">
+		</div>
+		<div class="col-md-3">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="email">Email</label>
+			<input class= "form-control form-control-sm" type="email" name="email" id="email" value="{{objeto.email}}">
+		</div>
+		<div class="col-md-3">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="endereco">Endereço</label>
+			<input class= "form-control form-control-sm" type="text" name="endereco" id="endereco" value="{{objeto.endereco}}">
+		</div>
+		<div class="col-md-3">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="cidade">Cidade</label>
+			<input class= "form-control form-control-sm" type="text" name="cidade" id="cidade" value="{{objeto.cidade}}">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="estado">Estado</label>
+			<select class="form-select-sm form-select" name="estado" id="estado">
+				<option value=""></option>
+				{% for key, item in estados %}
+            {% if key == objeto.estado %}
+				<option value="{{key}}" selected>{{item}}</option>
+            {% else %}
+				<option value="{{key}}">{{item}}</option>
+            {% endif %}
+				{% endfor %}
+			</select>
+		</div>
+		<div class="col-md-2">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="cep">CEP</label>
+			<input class= "form-control form-control-sm" type="text" name="cep" id="cep" value="{{objeto.cep}}">
+		</div>
+		<div class="col-md-2">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="telefone">Telefone</label>
+			<input class= "form-control form-control-sm" type="text" name="telefone" id="telefone" value="{{objeto.telefone}}">
+		</div>
+		<div class="col-md-2">
+			<label class="col-sm-7 form-label col-form-label col-form-label-sm text-secondary" for="nivel">Nível de Acesso</label>
+			<select class="form-select-sm form-select" name="nivel" id="nivel">
+				<option value=""></option>
+            {% for key, item in niveis %}
+            {% if key == objeto.nivel %}
+				<option value="{{key}}" selected>{{item}}</option>
+            {% else %}
+				<option value="{{key}}">{{item}}</option>
+            {% endif %}
+				{% endfor %}
+			</select>
+		</div>
+		<div class="col-md-2 mb-2">
+			<label class="col-sm-2 form-label col-form-label col-form-label-sm text-secondary" for="btn-save">Gravar</label>
+			<button class="form-control btn btn-link" type="submit" title="Adicionar" id="btn-save"><i class="material-icons text-success">save</i></button>
+		</div>
+	</div>
+</form>
